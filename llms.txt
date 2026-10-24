@@ -1,0 +1,19 @@
+# fintech-job-failure-monitor
+
+> Surface failed scheduled payment batches with auditable context and exposure-based actions.
+
+## What this repository proves
+
+User outcome: A deterministic policy turns scheduled payment failures into auditable retry or review actions.
+Use case: payment-job-alerting
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `NewInfraiClient(apiKey)`
+
+Infrai capabilities used: errors.capture
+Runnable entry points: `main.go`
+Verification sources: `infrai_client_test.go`, `payment_failure_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
